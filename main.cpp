@@ -27,10 +27,14 @@ int main() {
 
     cout << "Enter your DESTINATION station number (1-9): ";
     cin >> destinationStation;
-  while (destinationStation < 1 || destinationStation > 9) {
+  while (destinationStation < 1){
     cout << "Invalid station! Please enter a number between 1 and 9: ";
     cin >> destinationStation;
 }
+    while (destinationStation > 9){
+        cout << "You are leaving Manhattan. I only work in Manhattan. Please enter a number between 1 and 9: ";
+        cin >> destinationStation;
+    }
 
     cout << "* Your Current Station: ";
   if (currentStation == 1) {
